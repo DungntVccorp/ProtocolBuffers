@@ -73,7 +73,7 @@
 		__PBXFileRef_ProtocolBuffers.xcodeproj/Configs/Project.xcconfig /* ProtocolBuffers.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProtocolBuffers.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
 		__PBXFileRef_Tests/ProtocolBuffersTests/ProtocolBuffersTests.swift /* ProtocolBuffersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolBuffersTests.swift; sourceTree = "<group>"; };
 		"_____Product_ProtocolBuffers" /* ProtocolBuffers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProtocolBuffers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_ProtocolBuffersTests" /* ProtocolBuffersTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProtocolBuffersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_ProtocolBuffersTests" /* ProtocolBuffersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ProtocolBuffersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +231,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"______Target_ProtocolBuffers" = {
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "ProtocolBuffers" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -303,10 +308,12 @@
 		_ReleaseConf_ProtocolBuffers /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = ProtocolBuffers.xcodeproj/ProtocolBuffers_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = ProtocolBuffers;
@@ -332,10 +339,12 @@
 		"___DebugConf_ProtocolBuffers" /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = ProtocolBuffers.xcodeproj/ProtocolBuffers_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = ProtocolBuffers;
@@ -364,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = __PBXFileRef_ProtocolBuffers.xcodeproj/Configs/Project.xcconfig /* ProtocolBuffers.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Release;
 		};
@@ -371,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = __PBXFileRef_ProtocolBuffers.xcodeproj/Configs/Project.xcconfig /* ProtocolBuffers.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Debug;
 		};
