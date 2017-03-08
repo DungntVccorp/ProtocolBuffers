@@ -65,8 +65,9 @@ public protocol ProtocolBuffersMessageBuilder {
      //Delimited Encoding/Decoding
      func mergeDelimitedFrom(inputStream:InputStream) throws -> Self?
     
-    static func decodeToBuilder(jsonMap:Dictionary<String,AnyObject>) throws -> Self
+    static func decodeToBuilder(jsonMap:Dictionary<String,Any>) throws -> Self
     static func fromJSONToBuilder(data:Data) throws -> Self
+    
 }
 
 public func == (lhs: AbstractProtocolBuffersMessage, rhs: AbstractProtocolBuffersMessage) -> Bool {
@@ -236,7 +237,7 @@ open class AbstractProtocolBuffersMessageBuilder:ProtocolBuffersMessageBuilder {
     }
     
     //JSON
-    class open func decodeToBuilder(jsonMap: Dictionary<String, AnyObject>) throws -> Self {
+    class open func decodeToBuilder(jsonMap: Dictionary<String, Any>) throws -> Self {
         throw ProtocolBuffersError.obvious("JSON Encoding/Decoding available only in syntax=\"proto3\"")
     }
     
